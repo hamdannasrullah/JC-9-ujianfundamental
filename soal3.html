@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SOAL 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="soal3.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        form {
+            width: 45%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form >
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="search" oninput="funFilterName()"></p>
+            <p>Umur: <input type="number" name="num1" id="num1" onkeyup="funFilterUmur()"> - <input type="number" name="num2" id="num2"
+                    onkeyup="funFilterUmur()"></p>
+            <p>Pekerjaan: <select name="job" id="job">
+                </select>
+            </p>
+            <p><input type="button" value="Search Job" onclick="funFilterJob()"></p>
+            <p>Kelamin: <input type="radio" id="kelamin" value="Pria">Pria <input type="radio" id="kelamin" value="Wanita">Wanita</p>
+        </fieldset>
+
+        <fieldset>
+        <legend>Sorting</legend>
+                    <p><input type="button" id="sortnama" value="Sort Nama" onclick="funSortName()">
+                    <input type="button" id="sortumur" value="Sort Umur" onclick="funSortUmur()">
+                    <input type="button" id="sortkelamin" value="Sort Kelamin" onclick="funSortKelamin()">
+                    <input type="button" id="sortpekerjaan" value="Sort Pekerjaan" onclick="funSortPekerjaan()"></p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td><input type="text" name="nama" id="nama"></td>
+                <td><input type="number" name="nama" id="umur"></td>
+                <td><input type="text" name="nama" id="jobInput"></td>
+                <td><input type="radio" id="kelamin" value="Pria">Pria <input type="radio" id="kelamin" value="Wanita">Wanita</td>
+            </table>
+            <p><input type="reset" value="Submit" onclick="funInputData()";></p>
+        </fieldset>
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table id="myTable">
+                <thead>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>kelamin</th>
+                    <th>Pekerjaan</th>
+                </thead>
+                <tbody id="here">
+                    
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
